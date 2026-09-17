@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Port (1024-65535)" android:textStyle="bold"/>
+        <EditText android:id="@+id/etPort"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="Mode" android:textStyle="bold"/>
+
+        <RadioGroup android:id="@+id/rgMode"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/rbHtml"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Serve custom HTML"/>
+            <RadioButton android:id="@+id/rbDir"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="File manager (browse + upload)"/>
+        </RadioGroup>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="Custom HTML"
+            android:textStyle="bold"/>
+        <EditText android:id="@+id/etHtml"
+            android:layout_width="match_parent" android:layout_height="150dp"
+            android:fontFamily="monospace" android:gravity="top|start"
+            android:inputType="textMultiLine" android:textSize="12sp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="Shared folder"
+            android:textStyle="bold"/>
+        <TextView android:id="@+id/tvFolder"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="(not selected)" android:textSize="12sp"
+            android:textColor="#888"/>
+        <Button android:id="@+id/btnPickFolder"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Choose folder"/>
+
+        <CheckBox android:id="@+id/cbAllowUpload"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Allow file upload"/>
+
+        <CheckBox android:id="@+id/cbAllowDelete"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Allow delete / create folder"/>
+
+        <Button android:id="@+id/btnSave"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="Save"/>
+    </LinearLayout>
+</ScrollView>
